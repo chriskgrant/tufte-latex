@@ -2427,8 +2427,8 @@
 %%
 % If there is a `tufte-common-local.tex' file, load it up.
 \IfFileExists{tufte-common-local.tex}{%
-  \input{tufte-common-local.tex}%
   \@tufte@info@noline{Loading tufte-common-local.tex}%
+  \input{tufte-common-local.tex}%
 }{}
 
 %%
