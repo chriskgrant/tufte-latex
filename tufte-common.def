@@ -1380,15 +1380,6 @@
 %%
 % Forces the outer edge of the caption to be set ragged.  Therefore, on verso
 % pages it's ragged left, and on recto pages it's ragged right.
-\newcommand*{\@tufte@justification@caption@outer}{%
-  \@tufte@checkoddpage%
-  \ifthenelse{\boolean{@tufte@odd@page}}{%
-    \RaggedRight
-  }{%
-    \RaggedLeft
-  }%
-}
-
 \newcommand*{\@tufte@justification@outer}{%
   \@tufte@checkoddpage%
   \ifthenelse{\boolean{@tufte@odd@page}}{%
@@ -1397,6 +1388,8 @@
     \RaggedLeft
   }%
 }
+
+\newcommand*{\@tufte@justification@caption@outer}{\@tufte@justification@outer}}
 
 %%
 % A collection of macros to be used with the new Tufte-style float
