@@ -3,7 +3,7 @@
 %% classes.
 %%
 \ProvidesFile{tufte-common.def}
-  [2023/03/20 v3.6.0 Common code for the Tufte-LaTeX styles]
+  [2025/02/07 v3.6.1 Common code for the Tufte-LaTeX styles]
 
 %%
 % The `xkeyval' package simplifies the user interface for the document class
@@ -1380,14 +1380,6 @@
 %%
 % Forces the outer edge of the caption to be set ragged.  Therefore, on verso
 % pages it's ragged left, and on recto pages it's ragged right.
-\newcommand*{\@tufte@justification@caption@outer}{%
-  \ifthenelse{\boolean{@tufte@float@recto}}{%
-    \RaggedRight
-  }{%
-    \RaggedLeft
-  }%
-}
-
 \newcommand*{\@tufte@justification@outer}{%
   \@tufte@checkoddpage%
   \ifthenelse{\boolean{@tufte@odd@page}}{%
@@ -1396,6 +1388,8 @@
     \RaggedLeft
   }%
 }
+
+\newcommand*{\@tufte@justification@caption@outer}{\@tufte@justification@outer}}
 
 %%
 % A collection of macros to be used with the new Tufte-style float
@@ -2427,8 +2421,8 @@
 %%
 % If there is a `tufte-common-local.tex' file, load it up.
 \IfFileExists{tufte-common-local.tex}{%
-  \input{tufte-common-local.tex}%
   \@tufte@info@noline{Loading tufte-common-local.tex}%
+  \input{tufte-common-local.tex}%
 }{}
 
 %%

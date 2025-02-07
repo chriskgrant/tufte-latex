@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesClass{tufte-handout}
-  [2023/03/20 v3.6.0 Tufte-handout class]
+  [2025/02/07 v3.6.1 Tufte-handout class]
 
 %%
 % Declare we're tufte-handout
@@ -35,8 +35,8 @@
 %%
 % If there is a `tufte-handout-local.tex' file, load it.
 \IfFileExists{tufte-handout-local.tex}{%
-  \input{tufte-handout-local}%
   \@tufte@info@noline{Loading tufte-handout-local.tex}%
+  \input{tufte-handout-local.tex}%
 }{}
 
 %%

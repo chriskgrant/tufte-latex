@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}[1994/06/01]
 \ProvidesClass{tufte-book}
-  [2023/03/20 v3.6.0 Tufte-book class]
+  [2025/02/07 v3.6.1 Tufte-book class]
 
 %%
 % Declare we're tufte-book
@@ -80,10 +80,10 @@
 \setcounter{tocdepth}{0}
 
 %%
-% If there is a `tufte-book-local.sty' file, load it.
+% If there is a `tufte-book-local.tex' file, load it.
 \IfFileExists{tufte-book-local.tex}{%
   \@tufte@info@noline{Loading tufte-book-local.tex}%
-  \input{tufte-book-local}%
+  \input{tufte-book-local.tex}%
 }{}
 
 %%

@@ -1,3 +1,9 @@
+== 3.6.1 - 2025/02/07
+* Fix bug in handling of the `raggedouter' option that caused the captions to
+  be always ragged to the right.
+* Improve how makefile compiles `tex' files, ignoring the customization files
+  called `tufte-*-local.tex'.
+
 == 3.6.0 - 2023/03/20
 
 * Clean up code formatting/style.
